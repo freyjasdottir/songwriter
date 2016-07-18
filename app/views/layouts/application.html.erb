@@ -6,7 +6,11 @@
   <title><%= content_for?(:title) ? yield(:title) : "Songwriter" %></title>
   <%= stylesheet_link_tag    'application' %>
   <%= javascript_include_tag 'application' %>
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css">
 
+  <!-- Compressed JavaScript -->
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
