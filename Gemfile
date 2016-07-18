@@ -58,3 +58,5 @@ end
 group :test do
   gem 'coveralls', require: false
 end
+
+gem 'rails_12factor', group: :production
