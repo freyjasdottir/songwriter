@@ -23,6 +23,9 @@
       <ul class="menu">
         <% if user_signed_in? %>
           <li>
+            <%= link_to 'Your Songs', songs_path %>
+          </li>
+          <li>
             <%= link_to "#{current_user.username}", edit_user_registration_path(@user)%>
           </li>
           <li>
