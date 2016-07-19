@@ -24,19 +24,4 @@ class ApplicationController < ActionController::Base
       user_params.permit(keys)
     end
   end
-
-  def check_permissions
-    item = model.find(params[:id])
-
-    if !current_user || !current_user.can_modify?(item)
-      flash[:alert] = 'You do not have permission to complete that action.'
-      redirect_to root_path
-    end
-  end
-
-  private
-
-  def model
-    self.class.name.sub("Controller", "").singularize.constantize
-  end
 end
