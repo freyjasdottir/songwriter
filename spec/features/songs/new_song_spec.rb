@@ -19,4 +19,12 @@ feature 'Create new song' do
     expect(page).to have_content(song['body'])
     expect(page).to have_content('Song saved successfully')
   end
+
+  scenario 'User submits bad data' do
+    fill_in('Title', with: '')
+
+    click_button('Save Song')
+
+  expect(page).to have_content('Problems saving song')
+  end
 end

@@ -21,7 +21,7 @@ class SongsController < ApplicationController
       redirect_to song_path(@new_song)
     else
       flash[:alert] = 'Problems saving song'
-      @errors = @song.errors.full_messages
+      @errors = @new_song.errors.full_messages
       render 'songs/new'
     end
   end
