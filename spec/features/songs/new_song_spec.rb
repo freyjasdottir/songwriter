@@ -25,6 +25,6 @@ feature 'Create new song' do
 
     click_button('Save Song')
 
-  expect(page).to have_content('Problems saving song')
+    expect(page).to have_content('Problems saving song')
   end
 end
