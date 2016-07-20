@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :homepage, only: [:index]
 
   resources :songs do
-    resources :sounds, only: [:index, :new, :create, :destroy]
+    resources :sounds, only: [:new, :create, :destroy]
+    resources :texts, only: [:new, :create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
