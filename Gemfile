@@ -43,6 +43,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: true
+  gem 'dotenv-rails'
 end
 
 gem 'byebug'

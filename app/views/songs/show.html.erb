@@ -1,2 +1,7 @@
 <h2><%= @song.title %></h2>
 <p><%= @song.body %></p>
+
+<%= render '/songs/media' %>
+
+<%= link_to 'Edit Song', edit_song_path(@song.id), class: 'button' %>
+<%= link_to 'Add Sound', new_song_sound_path(@song.id), class: 'button' %>
