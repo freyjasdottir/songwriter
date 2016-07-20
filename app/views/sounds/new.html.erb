@@ -1,0 +1,10 @@
+<h2>Add Sound</h2>
+
+<%= render 'application/errors' %>
+<%= form_for [@song, @sound] do |f| %>
+
+  <%= f.label :track_url %>
+  <%= f.url_field :track_url %>
+
+  <%= f.submit 'Save Sound', class: 'button' %>
+<% end %>

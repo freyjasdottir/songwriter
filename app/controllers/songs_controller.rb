@@ -7,6 +7,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
+    @sounds = Sound.where(song_id: @song.id).find_each
   end
 
   def new
