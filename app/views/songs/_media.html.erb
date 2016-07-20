@@ -1,3 +1,8 @@
+<div class='texts'>
+  <% @texts.each do |text| %>
+    <%= render partial: '/texts/text', object: text %>
+  <% end %>
+</div>
 <div class="sounds">
   <% @sounds.each do |sound| %>
     <%= render partial: './sounds/sound', object: sound  %>
