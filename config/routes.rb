@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :songs do
     resources :sounds, only: [:new, :create, :destroy]
     resources :texts, only: [:new, :create, :destroy]
+    resources :arts, only: [:new, :create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
