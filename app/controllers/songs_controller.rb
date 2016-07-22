@@ -9,6 +9,7 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @sounds = Sound.where(song_id: @song.id).find_each
     @texts = Text.where(song_id: @song.id).find_each
+    @arts = Art.where(song_id: @song.id).find_each
   end
 
   def new
