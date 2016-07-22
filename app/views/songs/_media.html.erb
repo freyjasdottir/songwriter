@@ -8,3 +8,8 @@
     <%= render partial: './sounds/sound', object: sound  %>
   <% end %>
 </div>
+<div class="arts">
+  <% @arts.each do |art| %>
+    <%= render partial: './arts/art', object: art %>
+  <% end %>
+</div>
