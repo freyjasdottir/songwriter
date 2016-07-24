@@ -1,10 +1,10 @@
-<h2>Add Text</h2>
+<h2>Add Quote</h2>
 
 <%= render 'application/errors' %>
 <%= form_for [@song, @text] do |f| %>
 
-  <%= f.label :body, 'Text Body' %>
+  <%= f.label :body, 'Quote Body' %>
   <%= f.text_field :body %>
 
-  <%= f.submit 'Save Text', class: 'button' %>
+  <%= f.submit 'Save Quote', class: 'button' %>
 <% end %>
