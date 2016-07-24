@@ -1,9 +1,18 @@
-<h2><%= @song.title %></h2>
-<p><%= @song.body %></p>
+<div class='row song-info'>
+  <div class='large-6 columns'>
+    <h2><%= @song.title %></h2>
+    <p><%= @song.body %></p>
+  </div>
+  <div class='large-6 columns song-controls'>
+    <%= link_to 'Edit Song', edit_song_path(@song.id), class: 'button' %>
+    <%= link_to 'Add Sound', new_song_sound_path(@song.id), class: 'button' %>
+    <%= link_to 'Add Text', new_song_text_path(@song.id), class: 'button' %>
+    <%= link_to 'Add Art', new_song_art_path(@song.id), class: 'button' %>
+  </div>
+</div>
+
+
+
+
 
 <%= render '/songs/media' %>
-
-<%= link_to 'Edit Song', edit_song_path(@song.id), class: 'button' %>
-<%= link_to 'Add Sound', new_song_sound_path(@song.id), class: 'button' %>
-<%= link_to 'Add Text', new_song_text_path(@song.id), class: 'button' %>
-<%= link_to 'Add Art', new_song_art_path(@song.id), class: 'button' %>
