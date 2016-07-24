@@ -3,7 +3,5 @@
  *= require_self
  require foundation_and_overrides
  */
-
-@import 'foundation_and_overrides';
 @import 'homepage';
 @import 'songs';
