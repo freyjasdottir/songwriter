@@ -17,11 +17,14 @@
 }
 
 .song-title {
-  color: $primary-color;
   font-size: 24px;
   font-style: italic;
   margin-left: 0;
   margin-right: 20px;
   padding-top: 5px;
   list-style-type: none;
+}
+
+.song-title a {
+  color: $primary-color;
 }
