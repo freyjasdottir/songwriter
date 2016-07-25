@@ -1,6 +1,6 @@
 <div class='row song-info'>
   <div class='large-6 columns'>
-    <h2><%= @song.title %></h2>
+    <h3 class='song-title'><%= @song.title %></h3>
     <p><%= @song.body %></p>
   </div>
   <div class='large-6 columns song-controls'>
@@ -10,7 +10,7 @@
       <%= link_to 'Add Quote', new_song_text_path(@song.id), class: 'button' %>
       <%= link_to 'Add Art', new_song_art_path(@song.id), class: 'button' %>
     </div>
-  </div>  
+  </div>
 </div>
-
+<hr>
 <%= render '/songs/media' %>
