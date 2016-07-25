@@ -12,23 +12,16 @@
 
 .song-index {
   margin: auto;
-  width: 100%;
   text-align: center;
-}
-
-.song-index li{
-  list-style-type: none;
+  width: 100%;
 }
 
 .song-title {
-  margin-left: 0px;
-  padding-top: 5px;
-  font-style: italic;
-
-}
-
-.song-title a {
-  margin-right: 20px;
-  font-size: 24px;
   color: $primary-color;
+  font-size: 24px;
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 20px;
+  padding-top: 5px;
+  list-style-type: none;
 }
