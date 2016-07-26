@@ -8,11 +8,19 @@ class SoundsController < ApplicationController
   end
 
   def create
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
+    client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
     @sound = Sound.new(sound_params)
+    @song = Song.find(params[:song_id])
     track_url = @sound.track_url
-    embed_info = client.get('/oembed', :url => track_url)
-    @sound.embed_info = embed_info['html']
+
+    begin
+      embed_info = client.get('/oembed', url: 'track_url')
+      @sound.embed_info = embed_info['html']
+    rescue SoundCloud::ResponseError
+      flash[:alert] = 'Problems saving sound'
+      render 'sounds/new' && return
+    end
+
     @sound.song_id = params['song_id']
 
     if @sound.save
