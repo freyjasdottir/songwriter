@@ -8,7 +8,7 @@ class SoundsController < ApplicationController
   end
 
   def create
-    client = Soundcloud.new(client_id: 'ENV['SOUNDCLOUD_CLIENT_ID']')
+    client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
     @sound = Sound.new(sound_params)
     @song = Song.find(params[:song_id])
     track_url = @sound.track_url
