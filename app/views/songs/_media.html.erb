@@ -1,29 +1,23 @@
-<div class='media'>
-  <div class='row texts'>
-    <% @texts.each do |text| %>
-      <div class='large-4 columns'>
-        <%= render partial: '/texts/text', object: text %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="sounds">
-  <div class='row sounds'>
-    <% @sounds.each do |sound| %>
-      <div class='large-4 columns'>
-        <%= render partial: './sounds/sound', object: sound  %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="arts">
-  <div class = 'row arts'>
-    <% @arts.each do |art| %>
-      <div class='large-4 columns'>
-        <%= render partial: './arts/art', object: art %>
+<div class='row quotes'>
+  <% @texts.each do |text| %>
+    <div class='large-4 columns'>
+      <%= render partial: '/texts/text', object: text %>
     </div>
-  </div>
-    <% end %>
+  <% end %>
+</div>
+
+<div class='row sounds'>
+  <% @sounds.each do |sound| %>
+    <div class='large-4 columns'>
+      <%= render partial: './sounds/sound', object: sound  %>
+    </div>
+  <% end %>
+</div>
+
+<div class='row arts'>
+  <% @arts.each do |art| %>
+    <div class='large-4 columns'>
+      <%= render partial: './arts/art', object: art %>
+    </div>
+  <% end %>
 </div>
