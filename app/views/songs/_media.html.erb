@@ -1,6 +1,6 @@
 <div class='row quotes'>
   <% @texts.each do |text| %>
-    <div class='large-4 columns'>
+    <div class='large-4 columns quote'>
       <%= render partial: '/texts/text', object: text %>
     </div>
   <% end %>
