@@ -14,7 +14,7 @@ class SoundsController < ApplicationController
     track_url = @sound.track_url
 
     begin
-      embed_info = client.get('/oembed', url: 'track_url')
+      embed_info = client.get('/oembed', url: track_url)
       @sound.embed_info = embed_info['html']
     rescue SoundCloud::ResponseError
       flash[:alert] = 'Problems saving sound'
