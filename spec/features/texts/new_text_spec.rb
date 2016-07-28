@@ -22,7 +22,6 @@ feature 'Create new quote' do
   end
 
   scenario 'User passes bad data' do
-
     click_button('Save Quote')
 
     expect(page).to have_content('Add Quote')
