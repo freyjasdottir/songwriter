@@ -20,5 +20,4 @@ feature 'Create new quote' do
     expect(page).to have_content(text['body'])
     expect(page).to have_content('Quote saved successfully')
   end
-
 end
