@@ -8,6 +8,7 @@ class TextsController < ApplicationController
   def create
     @text = Text.new(text_params)
     @text.song_id = params['song_id']
+    @song = Song.find(params[:song_id])
 
     if @text.save
       flash[:success] = 'Quote saved successfully'
