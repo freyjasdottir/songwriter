@@ -20,4 +20,12 @@ feature 'Create new quote' do
     expect(page).to have_content(text['body'])
     expect(page).to have_content('Quote saved successfully')
   end
+
+  scenario 'User passes bad data' do
+
+    click_button('Save Quote')
+
+    expect(page).to have_content('Add Quote')
+    expect(page).to have_content('Problems saving quote')
+  end
 end
