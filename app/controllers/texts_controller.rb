@@ -10,10 +10,10 @@ class TextsController < ApplicationController
     @text.song_id = params['song_id']
 
     if @text.save
-      flash[:success] = 'Text saved successfully'
+      flash[:success] = 'Quote saved successfully'
       redirect_to song_path(params['song_id'])
     else
-      flash[:alert] = 'Problems saving text'
+      flash[:alert] = 'Problems saving quote'
       @errors = @text.errors.full_messages
       render 'texts/new'
     end
