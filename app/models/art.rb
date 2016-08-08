@@ -1,7 +1,7 @@
 class Art < ActiveRecord::Base
-  mount_uploader :art, ArtUploader
+  mount_uploader :imgfile, ArtUploader
 
   belongs_to :song
 
-  validates :art, presence: true
+  validates :imgfile, presence: { message: 'Must choose a file to upload' }
 end
