@@ -1,6 +1,7 @@
 require 'soundcloud'
 
 class SoundsController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @sound = Sound.new
@@ -18,7 +19,7 @@ class SoundsController < ApplicationController
       @sound.embed_info = embed_info['html']
     rescue SoundCloud::ResponseError
       flash[:alert] = 'Problems saving sound'
-      render 'sounds/new' && return
+      render('sounds/new') && return
     end
 
     @sound.song_id = params['song_id']
