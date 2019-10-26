@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -35,6 +33,8 @@ gem 'foundation-rails'
 gem 'soundcloud'
 gem 'carrierwave'
 gem 'fog-aws'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
